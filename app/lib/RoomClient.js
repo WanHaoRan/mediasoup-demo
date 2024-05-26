@@ -9,9 +9,9 @@ import * as e2e from './e2e';
 
 const VIDEO_CONSTRAINS =
 {
-	qvga : { width: { ideal: 320 }, height: { ideal: 240 } },
-	vga  : { width: { ideal: 640 }, height: { ideal: 480 } },
-	hd   : { width: { ideal: 1280 }, height: { ideal: 720 } }
+	qvga : { width: { ideal: 1920 }, height: { ideal: 1080 } },
+	vga  : { width: { ideal: 1920 }, height: { ideal: 1080 } },
+	hd   : { width: { ideal: 1920 }, height: { ideal: 1080 } }
 };
 
 const PC_PROPRIETARY_CONSTRAINTS =
@@ -1073,7 +1073,7 @@ export default class RoomClient
 					encodings =
 					[
 						{
-							maxBitrate      : 5000000,
+							maxBitrate      : 150000000,
 							scalabilityMode : this._webcamScalabilityMode || 'L3T3_KEY'
 						}
 					];
@@ -1085,7 +1085,7 @@ export default class RoomClient
 					[
 						{
 							scaleResolutionDownBy : 1,
-							maxBitrate            : 5000000,
+							maxBitrate            : 150000000,
 							scalabilityMode       : this._webcamScalabilityMode || 'L1T3'
 						}
 					];
@@ -1095,7 +1095,7 @@ export default class RoomClient
 						encodings.unshift(
 							{
 								scaleResolutionDownBy : 2,
-								maxBitrate            : 1000000,
+								maxBitrate            : 150000000,
 								scalabilityMode       : this._webcamScalabilityMode || 'L1T3'
 							}
 						);
@@ -1106,7 +1106,7 @@ export default class RoomClient
 						encodings.unshift(
 							{
 								scaleResolutionDownBy : 4,
-								maxBitrate            : 500000,
+								maxBitrate            : 150000000,
 								scalabilityMode       : this._webcamScalabilityMode || 'L1T3'
 							}
 						);
@@ -1365,7 +1365,7 @@ export default class RoomClient
 						cursor         : true,
 						width          : { max: 1920 },
 						height         : { max: 1080 },
-						frameRate      : { max: 30 }
+						frameRate      : { max: 120 }
 					}
 				});
 
@@ -1435,7 +1435,7 @@ export default class RoomClient
 					encodings =
 					[
 						{
-							maxBitrate      : 5000000,
+							maxBitrate      : 150000000,
 							scalabilityMode : this._sharingScalabilityMode || 'L3T3',
 							dtx             : true
 						}
@@ -1448,7 +1448,7 @@ export default class RoomClient
 					[
 						{
 							scaleResolutionDownBy : 1,
-							maxBitrate            : 5000000,
+							maxBitrate            : 150000000,
 							scalabilityMode       : this._sharingScalabilityMode || 'L1T3',
 							dtx                   : true
 						}
@@ -1459,7 +1459,7 @@ export default class RoomClient
 						encodings.unshift(
 							{
 								scaleResolutionDownBy : 2,
-								maxBitrate            : 1000000,
+								maxBitrate            : 150000000,
 								scalabilityMode       : this._sharingScalabilityMode || 'L1T3',
 								dtx                   : true
 							}
@@ -1471,7 +1471,7 @@ export default class RoomClient
 						encodings.unshift(
 							{
 								scaleResolutionDownBy : 4,
-								maxBitrate            : 500000,
+								maxBitrate            : 150000000,
 								scalabilityMode       : this._sharingScalabilityMode || 'L1T3',
 								dtx                   : true
 							}
